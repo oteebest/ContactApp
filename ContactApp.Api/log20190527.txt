@@ -1,0 +1,34 @@
+2019-05-27 10:57:24.543 +01:00 [INF] User profile is available. Using 'C:\Users\oteeb\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-05-27 10:57:26.230 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-05-27 10:57:26.761 +01:00 [INF] Executed DbCommand (69ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2019-05-27 10:57:26.932 +01:00 [INF] Executed DbCommand (54ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-05-27 10:57:27.534 +01:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-05-27 10:57:29.666 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2019-05-27 10:57:30.437 +01:00 [INF] Route matched with {action = "Get", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[System.String]] Get() on controller ContactApp.Api.Controllers.ValuesController (ContactApp.Api).
+2019-05-27 10:57:30.632 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ValuesController.Get (ContactApp.Api) - Validation state: "Valid"
+2019-05-27 10:57:30.650 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ValuesController.Get (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6.346ms.
+2019-05-27 10:57:30.721 +01:00 [INF] Executing ObjectResult, writing value of type 'System.String[]'.
+2019-05-27 10:57:30.876 +01:00 [INF] Executed action ContactApp.Api.Controllers.ValuesController.Get (ContactApp.Api) in 397.8156ms
+2019-05-27 10:57:30.914 +01:00 [INF] Request finished in 1263.2208ms 200 application/json; charset=utf-8
+2019-05-27 10:57:42.331 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/index.html  
+2019-05-27 10:57:42.402 +01:00 [INF] Request finished in 71.3834ms 200 text/html
+2019-05-27 10:57:42.788 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/swagger/v1/swagger.json  
+2019-05-27 10:57:42.961 +01:00 [INF] Request finished in 172.3125ms 200 application/json;charset=utf-8

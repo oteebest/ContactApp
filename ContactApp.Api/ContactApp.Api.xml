@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ContactApp.Api</name>
+    </assembly>
+    <members>
+        <member name="M:ContactApp.Api.Filters.ValidateModelStateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            Validates Model automaticaly 
+            </summary>
+            <param name="context"></param>
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1359 @@
+2019-06-21 07:17:52.026 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:17:52.061 +01:00 [INF] Policy execution successful.
+2019-06-21 07:17:52.158 +01:00 [INF] Request finished in 131.9902ms 204 
+2019-06-21 07:17:52.228 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:17:52.275 +01:00 [INF] Policy execution successful.
+2019-06-21 07:17:52.307 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:17:52.507 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:17:52.610 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:17:52.701 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:17:52.848 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:17:52.877 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 267.8532ms.
+2019-06-21 07:17:52.892 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:17:52.918 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 411.8663ms
+2019-06-21 07:17:52.943 +01:00 [INF] Request finished in 714.7828ms 200 application/json; charset=utf-8
+2019-06-21 07:17:56.647 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:17:56.650 +01:00 [INF] Policy execution successful.
+2019-06-21 07:17:56.652 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:17:56.678 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:17:56.712 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:17:56.760 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:17:56.812 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:17:56.867 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 155.2909ms.
+2019-06-21 07:17:56.879 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:17:56.902 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 224.9564ms
+2019-06-21 07:17:56.922 +01:00 [INF] Request finished in 275.5452ms 200 application/json; charset=utf-8
+2019-06-21 07:18:06.510 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:18:06.514 +01:00 [INF] Policy execution successful.
+2019-06-21 07:18:06.526 +01:00 [INF] Request finished in 15.8672ms 204 
+2019-06-21 07:18:06.546 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 92
+2019-06-21 07:18:06.580 +01:00 [INF] Policy execution successful.
+2019-06-21 07:18:06.615 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:18:06.697 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:18:06.727 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:18:06.758 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 07:18:06.835 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 07:18:06.952 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 07:18:07.064 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 337.28430000000003ms.
+2019-06-21 07:18:07.113 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:18:07.162 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 466.04130000000004ms
+2019-06-21 07:18:07.198 +01:00 [INF] Request finished in 652.6262ms 200 application/json; charset=utf-8
+2019-06-21 07:18:25.539 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:18:25.545 +01:00 [INF] Policy execution successful.
+2019-06-21 07:18:25.557 +01:00 [INF] Request finished in 17.9827ms 204 
+2019-06-21 07:18:25.575 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 116
+2019-06-21 07:18:25.593 +01:00 [INF] Policy execution successful.
+2019-06-21 07:18:25.622 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:18:25.702 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:18:25.745 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:18:25.758 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 07:18:25.811 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 07:18:25.881 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 07:18:26.051 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 306.3148ms.
+2019-06-21 07:18:26.116 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:18:26.182 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 481.62370000000004ms
+2019-06-21 07:18:26.218 +01:00 [INF] Request finished in 643.0233ms 200 application/json; charset=utf-8
+2019-06-21 07:18:34.739 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:18:34.745 +01:00 [INF] Policy execution successful.
+2019-06-21 07:18:34.748 +01:00 [INF] Request finished in 8.9253ms 204 
+2019-06-21 07:18:34.828 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:18:34.835 +01:00 [INF] Policy execution successful.
+2019-06-21 07:18:34.873 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:18:34.974 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:18:35.016 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:18:35.034 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:18:35.049 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:18:35.060 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 44.3853ms.
+2019-06-21 07:18:35.071 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:18:35.075 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 101.32270000000001ms
+2019-06-21 07:18:35.084 +01:00 [INF] Request finished in 255.6903ms 200 application/json; charset=utf-8
+2019-06-21 07:18:57.107 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/b8016cd5-35e9-40f5-82c4-eb5be03b079a  
+2019-06-21 07:18:57.148 +01:00 [INF] Policy execution successful.
+2019-06-21 07:18:57.186 +01:00 [INF] Request finished in 78.0683ms 204 
+2019-06-21 07:18:57.218 +01:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/api/contacts/b8016cd5-35e9-40f5-82c4-eb5be03b079a  
+2019-06-21 07:18:57.282 +01:00 [INF] Policy execution successful.
+2019-06-21 07:18:57.318 +01:00 [INF] Route matched with {action = "DeleteContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(System.String) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:18:57.417 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:18:57.482 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:18:57.555 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DateCreated], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Mobile], [e].[UserId]
+FROM [Contacts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-06-21 07:18:57.652 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Contacts]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2019-06-21 07:18:57.699 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 217.31220000000002ms.
+2019-06-21 07:18:57.731 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-21 07:18:57.763 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) in 346.94480000000004ms
+2019-06-21 07:18:57.781 +01:00 [INF] Request finished in 563.0368ms 200 application/json; charset=utf-8
+2019-06-21 07:19:16.533 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:19:16.549 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:16.612 +01:00 [INF] Request finished in 79.5051ms 204 
+2019-06-21 07:19:16.645 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:19:16.707 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:16.792 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:19:16.882 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:19:16.904 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:19:16.917 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:19:16.942 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:19:16.961 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 57.7888ms.
+2019-06-21 07:19:16.969 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:19:16.981 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 99.471600000000009ms
+2019-06-21 07:19:16.993 +01:00 [INF] Request finished in 347.5764ms 200 application/json; charset=utf-8
+2019-06-21 07:19:17.030 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/81c47834-9b90-49dc-9bad-75197bc00ca9  
+2019-06-21 07:19:17.033 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/a83dd933-ea4a-4ec3-b903-055d5d493a9c  
+2019-06-21 07:19:17.098 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:17.139 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:17.228 +01:00 [INF] Request finished in 198.2001ms 204 
+2019-06-21 07:19:17.231 +01:00 [INF] Request finished in 198.0028ms 204 
+2019-06-21 07:19:17.342 +01:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/api/contacts/a83dd933-ea4a-4ec3-b903-055d5d493a9c  
+2019-06-21 07:19:17.432 +01:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/api/contacts/81c47834-9b90-49dc-9bad-75197bc00ca9  
+2019-06-21 07:19:17.488 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:17.551 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:17.574 +01:00 [INF] Route matched with {action = "DeleteContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(System.String) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:19:17.633 +01:00 [INF] Route matched with {action = "DeleteContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(System.String) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:19:17.766 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:19:17.841 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:19:17.870 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:19:17.877 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:19:17.906 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DateCreated], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Mobile], [e].[UserId]
+FROM [Contacts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-06-21 07:19:17.923 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DateCreated], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Mobile], [e].[UserId]
+FROM [Contacts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-06-21 07:19:17.950 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Contacts]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2019-06-21 07:19:17.973 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Contacts]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2019-06-21 07:19:17.989 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 119.0348ms.
+2019-06-21 07:19:18.011 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 133.7187ms.
+2019-06-21 07:19:18.023 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-21 07:19:18.039 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-21 07:19:18.047 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) in 280.9493ms
+2019-06-21 07:19:18.060 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) in 218.6545ms
+2019-06-21 07:19:18.071 +01:00 [INF] Request finished in 728.9817ms 200 application/json; charset=utf-8
+2019-06-21 07:19:18.085 +01:00 [INF] Request finished in 652.9982ms 200 application/json; charset=utf-8
+2019-06-21 07:19:18.090 +01:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/api/contacts/81c47834-9b90-49dc-9bad-75197bc00ca9  
+2019-06-21 07:19:18.111 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:18.124 +01:00 [INF] Route matched with {action = "DeleteContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(System.String) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:19:18.159 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:19:18.173 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:19:18.190 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DateCreated], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Mobile], [e].[UserId]
+FROM [Contacts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-06-21 07:19:18.209 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) in 49.7453ms
+2019-06-21 07:19:18.220 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Remove[TEntity](TEntity entity)
+   at ContactApp.Infrastructure.Repositories.ContactRepository.DeleteContact(String contactId) in C:\Projects\ContactApp\ContactApp\ContactApp.Infrastructure\Repositories\ContactRepository.cs:line 101
+   at ContactApp.Core.Managers.ContactManager.DeleteContact(String contactId) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 39
+   at ContactApp.Api.Controllers.ContactController.DeleteContact(String contactId) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-21 07:19:18.345 +01:00 [ERR] Something went wrong: System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Remove[TEntity](TEntity entity)
+   at ContactApp.Infrastructure.Repositories.ContactRepository.DeleteContact(String contactId) in C:\Projects\ContactApp\ContactApp\ContactApp.Infrastructure\Repositories\ContactRepository.cs:line 101
+   at ContactApp.Core.Managers.ContactManager.DeleteContact(String contactId) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 39
+   at ContactApp.Api.Controllers.ContactController.DeleteContact(String contactId) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-21 07:19:18.399 +01:00 [INF] Request finished in 308.2206ms 500 application/json
+2019-06-21 07:19:21.162 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:19:21.166 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:21.170 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:19:21.248 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:19:21.286 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:19:21.318 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:19:21.384 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:19:21.412 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 126.3724ms.
+2019-06-21 07:19:21.435 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:19:21.451 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 203.95100000000002ms
+2019-06-21 07:19:21.464 +01:00 [INF] Request finished in 302.356ms 200 application/json; charset=utf-8
+2019-06-21 07:19:42.963 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:19:42.966 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:42.972 +01:00 [INF] Request finished in 8.1847ms 204 
+2019-06-21 07:19:43.012 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:19:43.019 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:43.035 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:19:43.104 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:19:43.168 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:19:43.228 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:19:43.319 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:19:43.399 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 231.1489ms.
+2019-06-21 07:19:43.432 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:19:43.464 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 360.63460000000003ms
+2019-06-21 07:19:43.482 +01:00 [INF] Request finished in 470.3448ms 200 application/json; charset=utf-8
+2019-06-21 07:19:49.443 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:19:49.450 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:49.465 +01:00 [INF] Request finished in 22.4397ms 204 
+2019-06-21 07:19:49.509 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:19:49.518 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:49.541 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:19:49.599 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:19:49.635 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:19:49.670 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:19:49.735 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:19:49.783 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 148.3665ms.
+2019-06-21 07:19:49.833 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:19:49.862 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 263.9957ms
+2019-06-21 07:19:49.875 +01:00 [INF] Request finished in 365.4268ms 200 application/json; charset=utf-8
+2019-06-21 07:19:57.801 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:19:57.807 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:57.810 +01:00 [INF] Request finished in 9.2068ms 204 
+2019-06-21 07:19:57.819 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 95
+2019-06-21 07:19:57.836 +01:00 [INF] Policy execution successful.
+2019-06-21 07:19:57.877 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:19:57.952 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:19:57.999 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:19:58.031 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 07:19:58.083 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 07:19:58.133 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 07:19:58.201 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 201.7673ms.
+2019-06-21 07:19:58.229 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:19:58.262 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 310.8838ms
+2019-06-21 07:19:58.270 +01:00 [INF] Request finished in 451.0784ms 200 application/json; charset=utf-8
+2019-06-21 07:20:08.678 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:20:08.681 +01:00 [INF] Policy execution successful.
+2019-06-21 07:20:08.684 +01:00 [INF] Request finished in 6.0302ms 204 
+2019-06-21 07:20:08.686 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 94
+2019-06-21 07:20:08.687 +01:00 [INF] Policy execution successful.
+2019-06-21 07:20:08.697 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:20:08.699 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:20:08.700 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:20:08.704 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 07:20:08.718 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 07:20:08.725 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 07:20:08.739 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 39.2806ms.
+2019-06-21 07:20:08.750 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:20:08.752 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 53.8387ms
+2019-06-21 07:20:08.756 +01:00 [INF] Request finished in 70.4762ms 200 application/json; charset=utf-8
+2019-06-21 07:20:27.336 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:20:27.344 +01:00 [INF] Policy execution successful.
+2019-06-21 07:20:27.351 +01:00 [INF] Request finished in 15.6714ms 204 
+2019-06-21 07:20:27.355 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 90
+2019-06-21 07:20:27.381 +01:00 [INF] Policy execution successful.
+2019-06-21 07:20:27.384 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:20:27.400 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:20:27.403 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:20:27.421 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 07:20:27.435 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 07:20:27.438 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 38.5783ms
+2019-06-21 07:20:27.453 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+ContactApp.Core.Util.ProcessException: Contact with this mobile 08094575869 already exists
+   at ContactApp.Core.Managers.ContactManager.CreateContact(String userID, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 33
+   at ContactApp.Api.Controllers.ContactController.Create(NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-21 07:20:27.479 +01:00 [ERR] Something went wrong: ContactApp.Core.Util.ProcessException: Contact with this mobile 08094575869 already exists
+   at ContactApp.Core.Managers.ContactManager.CreateContact(String userID, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 33
+   at ContactApp.Api.Controllers.ContactController.Create(NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-21 07:20:27.491 +01:00 [INF] Request finished in 135.7948ms 500 application/json
+2019-06-21 07:20:33.240 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:20:33.246 +01:00 [INF] Policy execution successful.
+2019-06-21 07:20:33.249 +01:00 [INF] Request finished in 8.8786ms 204 
+2019-06-21 07:20:33.257 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 90
+2019-06-21 07:20:33.259 +01:00 [INF] Policy execution successful.
+2019-06-21 07:20:33.260 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:20:33.264 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:20:33.274 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:20:33.280 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 07:20:33.288 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 07:20:33.293 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 07:20:33.311 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 37.124300000000005ms.
+2019-06-21 07:20:33.319 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:20:33.320 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 56.403800000000004ms
+2019-06-21 07:20:33.323 +01:00 [INF] Request finished in 65.7493ms 200 application/json; charset=utf-8
+2019-06-21 07:22:26.204 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:22:26.208 +01:00 [INF] Policy execution successful.
+2019-06-21 07:22:26.209 +01:00 [INF] Request finished in 5.7089ms 204 
+2019-06-21 07:22:26.265 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:22:26.267 +01:00 [INF] Policy execution successful.
+2019-06-21 07:22:26.268 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:22:26.272 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:22:26.274 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:22:26.293 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:22:26.308 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:22:26.317 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 43.8168ms.
+2019-06-21 07:22:26.320 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:22:26.350 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 78.4858ms
+2019-06-21 07:22:26.359 +01:00 [INF] Request finished in 94.4027ms 200 application/json; charset=utf-8
+2019-06-21 07:23:53.126 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:23:53.128 +01:00 [INF] Policy execution successful.
+2019-06-21 07:23:53.129 +01:00 [INF] Request finished in 3.5347ms 204 
+2019-06-21 07:23:53.141 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:23:53.144 +01:00 [INF] Policy execution successful.
+2019-06-21 07:23:53.145 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:23:53.147 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:23:53.149 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:23:53.170 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:23:53.181 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:23:53.200 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 51.3487ms.
+2019-06-21 07:23:53.211 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:23:53.213 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 65.9167ms
+2019-06-21 07:23:53.215 +01:00 [INF] Request finished in 74.0051ms 200 application/json; charset=utf-8
+2019-06-21 07:24:05.691 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:24:05.694 +01:00 [INF] Policy execution successful.
+2019-06-21 07:24:05.695 +01:00 [INF] Request finished in 4.2816ms 204 
+2019-06-21 07:24:05.720 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:24:05.722 +01:00 [INF] Policy execution successful.
+2019-06-21 07:24:05.725 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:24:05.727 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:24:05.739 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:24:05.744 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:24:05.749 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:24:05.760 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21.7012ms.
+2019-06-21 07:24:05.764 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:24:05.778 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 51.3699ms
+2019-06-21 07:24:05.781 +01:00 [INF] Request finished in 61.4454ms 200 application/json; charset=utf-8
+2019-06-21 07:24:21.416 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:24:21.425 +01:00 [INF] Policy execution successful.
+2019-06-21 07:24:21.441 +01:00 [INF] Request finished in 25.1295ms 204 
+2019-06-21 07:24:21.490 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:24:21.493 +01:00 [INF] Policy execution successful.
+2019-06-21 07:24:21.495 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:24:21.498 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:24:21.527 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:24:21.549 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:24:21.566 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:24:21.590 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 63.6488ms.
+2019-06-21 07:24:21.594 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:24:21.596 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 98.2693ms
+2019-06-21 07:24:21.618 +01:00 [INF] Request finished in 128.5221ms 200 application/json; charset=utf-8
+2019-06-21 07:24:40.863 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:24:40.865 +01:00 [INF] Policy execution successful.
+2019-06-21 07:24:40.867 +01:00 [INF] Request finished in 3.4694ms 204 
+2019-06-21 07:24:40.911 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:24:40.914 +01:00 [INF] Policy execution successful.
+2019-06-21 07:24:40.916 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:24:40.920 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:24:40.934 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:24:40.940 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:24:40.954 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:24:40.959 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.2666ms.
+2019-06-21 07:24:40.983 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:24:40.988 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 68.929600000000008ms
+2019-06-21 07:24:40.999 +01:00 [INF] Request finished in 87.8123ms 200 application/json; charset=utf-8
+2019-06-21 07:25:14.258 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:25:14.260 +01:00 [INF] Policy execution successful.
+2019-06-21 07:25:14.261 +01:00 [INF] Request finished in 3.2765ms 204 
+2019-06-21 07:25:14.273 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:25:14.276 +01:00 [INF] Policy execution successful.
+2019-06-21 07:25:14.277 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:25:14.286 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:25:14.289 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:25:14.297 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:25:14.309 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:25:14.323 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 34.239000000000004ms.
+2019-06-21 07:25:14.339 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:25:14.341 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 55.0775ms
+2019-06-21 07:25:14.343 +01:00 [INF] Request finished in 69.7337ms 200 application/json; charset=utf-8
+2019-06-21 07:25:21.149 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:25:21.151 +01:00 [INF] Policy execution successful.
+2019-06-21 07:25:21.153 +01:00 [INF] Request finished in 4.7101ms 204 
+2019-06-21 07:25:21.169 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:25:21.170 +01:00 [INF] Policy execution successful.
+2019-06-21 07:25:21.173 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:25:21.185 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:25:21.188 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:25:21.200 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:25:21.204 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:25:21.240 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 52.1145ms.
+2019-06-21 07:25:21.242 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:25:21.244 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 58.6659ms
+2019-06-21 07:25:21.245 +01:00 [INF] Request finished in 76.6351ms 200 application/json; charset=utf-8
+2019-06-21 07:25:23.625 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:25:23.631 +01:00 [INF] Policy execution successful.
+2019-06-21 07:25:23.632 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:25:23.650 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:25:23.654 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:25:23.676 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:25:23.693 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:25:23.697 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 43.6403ms.
+2019-06-21 07:25:23.718 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:25:23.719 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 70.1118ms
+2019-06-21 07:25:23.721 +01:00 [INF] Request finished in 95.9959ms 200 application/json; charset=utf-8
+2019-06-21 07:25:27.123 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/d53456ad-de05-4f35-b092-6e72487820fd  
+2019-06-21 07:25:27.125 +01:00 [INF] Policy execution successful.
+2019-06-21 07:25:27.128 +01:00 [INF] Request finished in 4.2626ms 204 
+2019-06-21 07:25:27.130 +01:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/api/contacts/d53456ad-de05-4f35-b092-6e72487820fd  
+2019-06-21 07:25:27.131 +01:00 [INF] Policy execution successful.
+2019-06-21 07:25:27.139 +01:00 [INF] Route matched with {action = "DeleteContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(System.String) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:25:27.144 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:25:27.145 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:25:27.149 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DateCreated], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Mobile], [e].[UserId]
+FROM [Contacts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-06-21 07:25:27.162 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Contacts]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2019-06-21 07:25:27.173 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 28.541ms.
+2019-06-21 07:25:27.186 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-21 07:25:27.188 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) in 44.4506ms
+2019-06-21 07:25:27.191 +01:00 [INF] Request finished in 61.1785ms 200 application/json; charset=utf-8
+2019-06-21 07:26:40.956 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:26:40.958 +01:00 [INF] Policy execution successful.
+2019-06-21 07:26:40.960 +01:00 [INF] Request finished in 4.0788ms 204 
+2019-06-21 07:26:40.964 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:26:40.971 +01:00 [INF] Policy execution successful.
+2019-06-21 07:26:40.972 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:26:40.974 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:26:40.975 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:26:40.990 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:26:41.003 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:26:41.006 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 30.5701ms.
+2019-06-21 07:26:41.027 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:26:41.033 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 59.0079ms
+2019-06-21 07:26:41.045 +01:00 [INF] Request finished in 81.199ms 200 application/json; charset=utf-8
+2019-06-21 07:28:30.516 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:28:30.518 +01:00 [INF] Policy execution successful.
+2019-06-21 07:28:30.520 +01:00 [INF] Request finished in 3.1558ms 204 
+2019-06-21 07:28:30.526 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:28:30.531 +01:00 [INF] Policy execution successful.
+2019-06-21 07:28:30.532 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:28:30.534 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:28:30.536 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:28:30.540 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:28:30.553 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:28:30.556 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 20.077ms.
+2019-06-21 07:28:30.569 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:28:30.571 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 37.454ms
+2019-06-21 07:28:30.591 +01:00 [INF] Request finished in 65.2205ms 200 application/json; charset=utf-8
+2019-06-21 07:28:41.705 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/ee61f5ed-c1d6-45d4-b312-043c0c1e4bef  
+2019-06-21 07:28:41.706 +01:00 [INF] Policy execution successful.
+2019-06-21 07:28:41.709 +01:00 [INF] Request finished in 3.8254ms 204 
+2019-06-21 07:28:41.711 +01:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/api/contacts/ee61f5ed-c1d6-45d4-b312-043c0c1e4bef  
+2019-06-21 07:28:41.713 +01:00 [INF] Policy execution successful.
+2019-06-21 07:28:41.721 +01:00 [INF] Route matched with {action = "DeleteContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(System.String) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:28:41.724 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:28:41.725 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:28:41.729 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DateCreated], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Mobile], [e].[UserId]
+FROM [Contacts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-06-21 07:28:41.744 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Contacts]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2019-06-21 07:28:41.761 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 36.399ms.
+2019-06-21 07:28:41.763 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-21 07:28:41.764 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) in 40.5905ms
+2019-06-21 07:28:41.766 +01:00 [INF] Request finished in 54.7952ms 200 application/json; charset=utf-8
+2019-06-21 07:30:34.160 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:30:34.161 +01:00 [INF] Policy execution successful.
+2019-06-21 07:30:34.163 +01:00 [INF] Request finished in 3.0162ms 204 
+2019-06-21 07:30:34.201 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:30:34.202 +01:00 [INF] Policy execution successful.
+2019-06-21 07:30:34.203 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:30:34.207 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:30:34.209 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:30:34.223 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:30:34.230 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:30:34.240 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 30.6062ms.
+2019-06-21 07:30:34.242 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:30:34.243 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 36.9657ms
+2019-06-21 07:30:34.256 +01:00 [INF] Request finished in 54.7015ms 200 application/json; charset=utf-8
+2019-06-21 07:30:41.936 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:30:41.938 +01:00 [INF] Policy execution successful.
+2019-06-21 07:30:41.941 +01:00 [INF] Request finished in 4.6554ms 204 
+2019-06-21 07:30:41.967 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:30:41.969 +01:00 [INF] Policy execution successful.
+2019-06-21 07:30:41.970 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:30:41.995 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:30:41.998 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:30:42.002 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:30:42.018 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:30:42.020 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.718700000000002ms.
+2019-06-21 07:30:42.036 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:30:42.038 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 43.1458ms
+2019-06-21 07:30:42.042 +01:00 [INF] Request finished in 74.4059ms 200 application/json; charset=utf-8
+2019-06-21 07:30:55.134 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:30:55.137 +01:00 [INF] Policy execution successful.
+2019-06-21 07:30:55.138 +01:00 [INF] Request finished in 4.418ms 204 
+2019-06-21 07:30:55.142 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 94
+2019-06-21 07:30:55.153 +01:00 [INF] Policy execution successful.
+2019-06-21 07:30:55.154 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:30:55.158 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:30:55.168 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:30:55.174 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 07:30:55.190 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 07:30:55.219 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 61.726200000000006ms
+2019-06-21 07:30:55.220 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+ContactApp.Core.Util.ProcessException: Contact with this mobile 08094575869 already exists
+   at ContactApp.Core.Managers.ContactManager.CreateContact(String userID, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 33
+   at ContactApp.Api.Controllers.ContactController.Create(NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-21 07:30:55.244 +01:00 [ERR] Something went wrong: ContactApp.Core.Util.ProcessException: Contact with this mobile 08094575869 already exists
+   at ContactApp.Core.Managers.ContactManager.CreateContact(String userID, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 33
+   at ContactApp.Api.Controllers.ContactController.Create(NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-21 07:30:55.261 +01:00 [INF] Request finished in 119.4422ms 500 application/json
+2019-06-21 07:31:00.962 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:31:00.968 +01:00 [INF] Policy execution successful.
+2019-06-21 07:31:00.969 +01:00 [INF] Request finished in 7.1041ms 204 
+2019-06-21 07:31:00.972 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 94
+2019-06-21 07:31:00.982 +01:00 [INF] Policy execution successful.
+2019-06-21 07:31:00.983 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:31:00.986 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:31:01.000 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:31:01.002 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 07:31:01.006 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 07:31:01.031 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 07:31:01.039 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 39.4673ms.
+2019-06-21 07:31:01.042 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:31:01.056 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 70.2595ms
+2019-06-21 07:31:01.059 +01:00 [INF] Request finished in 87.3944ms 200 application/json; charset=utf-8
+2019-06-21 07:31:19.196 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/4a9425bd-5444-4f43-83a6-7bbf16353b7f  
+2019-06-21 07:31:19.203 +01:00 [INF] Policy execution successful.
+2019-06-21 07:31:19.215 +01:00 [INF] Request finished in 19.5821ms 204 
+2019-06-21 07:31:19.220 +01:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/api/contacts/4a9425bd-5444-4f43-83a6-7bbf16353b7f  
+2019-06-21 07:31:19.229 +01:00 [INF] Policy execution successful.
+2019-06-21 07:31:19.233 +01:00 [INF] Route matched with {action = "DeleteContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(System.String) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:31:19.257 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:31:19.264 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:31:19.276 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DateCreated], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Mobile], [e].[UserId]
+FROM [Contacts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-06-21 07:31:19.291 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Contacts]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2019-06-21 07:31:19.306 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 42.425200000000004ms.
+2019-06-21 07:31:19.308 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-21 07:31:19.319 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) in 61.9472ms
+2019-06-21 07:31:19.321 +01:00 [INF] Request finished in 101.2118ms 200 application/json; charset=utf-8
+2019-06-21 07:42:38.196 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:42:38.199 +01:00 [INF] Policy execution successful.
+2019-06-21 07:42:38.202 +01:00 [INF] Request finished in 6.4838ms 204 
+2019-06-21 07:42:38.277 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:42:38.280 +01:00 [INF] Policy execution successful.
+2019-06-21 07:42:38.282 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:42:38.296 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:42:38.300 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:42:38.322 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:42:38.351 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:42:38.360 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 60.1636ms.
+2019-06-21 07:42:38.362 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:42:38.364 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 68.1521ms
+2019-06-21 07:42:38.381 +01:00 [INF] Request finished in 103.9797ms 200 application/json; charset=utf-8
+2019-06-21 07:44:10.786 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:44:10.790 +01:00 [INF] Policy execution successful.
+2019-06-21 07:44:10.792 +01:00 [INF] Request finished in 5.6874ms 204 
+2019-06-21 07:44:10.829 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:44:10.831 +01:00 [INF] Policy execution successful.
+2019-06-21 07:44:10.844 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:44:10.846 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:44:10.847 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:44:10.851 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:44:10.869 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:44:10.872 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.2378ms.
+2019-06-21 07:44:10.890 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:44:10.903 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 57.090900000000005ms
+2019-06-21 07:44:10.905 +01:00 [INF] Request finished in 75.4882ms 200 application/json; charset=utf-8
+2019-06-21 07:45:14.934 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:45:15.008 +01:00 [INF] Policy execution successful.
+2019-06-21 07:45:15.070 +01:00 [INF] Request finished in 136.0366ms 204 
+2019-06-21 07:45:15.166 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:45:15.170 +01:00 [INF] Policy execution successful.
+2019-06-21 07:45:15.172 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:45:15.201 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:45:15.215 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:45:15.223 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:45:15.263 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:45:15.273 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 58.0718ms.
+2019-06-21 07:45:15.298 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:45:15.301 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 100.391ms
+2019-06-21 07:45:15.316 +01:00 [INF] Request finished in 150.1224ms 200 application/json; charset=utf-8
+2019-06-21 07:46:22.504 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:46:22.506 +01:00 [INF] Policy execution successful.
+2019-06-21 07:46:22.508 +01:00 [INF] Request finished in 3.9636ms 204 
+2019-06-21 07:46:22.541 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:46:22.542 +01:00 [INF] Policy execution successful.
+2019-06-21 07:46:22.545 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:46:22.556 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:46:22.558 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:46:22.564 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:46:22.581 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:46:22.599 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41.3009ms.
+2019-06-21 07:46:22.602 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:46:22.605 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 49.056000000000004ms
+2019-06-21 07:46:22.619 +01:00 [INF] Request finished in 78.4089ms 200 application/json; charset=utf-8
+2019-06-21 07:48:22.238 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 07:48:22.239 +01:00 [INF] Policy execution successful.
+2019-06-21 07:48:22.240 +01:00 [INF] Request finished in 2.4247ms 204 
+2019-06-21 07:48:22.259 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 07:48:22.260 +01:00 [INF] Policy execution successful.
+2019-06-21 07:48:22.261 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 07:48:22.265 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 07:48:22.274 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 07:48:22.280 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 07:48:22.293 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 07:48:22.307 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 33.5312ms.
+2019-06-21 07:48:22.309 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 07:48:22.311 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 46.4472ms
+2019-06-21 07:48:22.327 +01:00 [INF] Request finished in 68.0234ms 200 application/json; charset=utf-8
+2019-06-21 12:41:41.074 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 12:41:41.078 +01:00 [INF] Policy execution successful.
+2019-06-21 12:41:41.080 +01:00 [INF] Request finished in 6.9874ms 204 
+2019-06-21 12:41:41.084 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 12:41:41.093 +01:00 [INF] Policy execution successful.
+2019-06-21 12:41:41.097 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:41:41.113 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:41:41.123 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:41:41.139 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 12:41:41.161 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 12:41:41.169 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 47.060500000000005ms.
+2019-06-21 12:41:41.180 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 12:41:41.185 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 73.9384ms
+2019-06-21 12:41:41.196 +01:00 [INF] Request finished in 112.3861ms 200 application/json; charset=utf-8
+2019-06-21 12:41:51.855 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 12:41:51.860 +01:00 [INF] Policy execution successful.
+2019-06-21 12:41:51.862 +01:00 [INF] Request finished in 6.455ms 204 
+2019-06-21 12:41:51.865 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 93
+2019-06-21 12:41:51.881 +01:00 [INF] Policy execution successful.
+2019-06-21 12:41:51.883 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:41:51.897 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:41:51.901 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:41:51.922 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 12:41:51.936 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 12:41:51.962 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 12:41:51.969 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 68.5077ms.
+2019-06-21 12:41:51.990 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 12:41:51.992 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 96.1148ms
+2019-06-21 12:41:51.994 +01:00 [INF] Request finished in 129.5939ms 200 application/json; charset=utf-8
+2019-06-21 12:42:15.551 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 12:42:15.555 +01:00 [INF] Policy execution successful.
+2019-06-21 12:42:15.557 +01:00 [INF] Request finished in 6.5524ms 204 
+2019-06-21 12:42:15.559 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 114
+2019-06-21 12:42:15.560 +01:00 [INF] Policy execution successful.
+2019-06-21 12:42:15.566 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:42:15.570 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:42:15.573 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:42:15.587 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 12:42:15.612 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 12:42:15.616 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 12:42:15.630 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 57.9602ms.
+2019-06-21 12:42:15.632 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 12:42:15.634 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 63.5576ms
+2019-06-21 12:42:15.650 +01:00 [INF] Request finished in 90.5295ms 200 application/json; charset=utf-8
+2019-06-21 12:45:31.609 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 12:45:31.611 +01:00 [INF] Policy execution successful.
+2019-06-21 12:45:31.613 +01:00 [INF] Request finished in 3.817ms 204 
+2019-06-21 12:45:31.622 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 12:45:31.625 +01:00 [INF] Policy execution successful.
+2019-06-21 12:45:31.626 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:45:31.639 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:45:31.642 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:45:31.649 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 12:45:31.664 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 12:45:31.678 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 36.2243ms.
+2019-06-21 12:45:31.690 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 12:45:31.693 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 53.551ms
+2019-06-21 12:45:31.697 +01:00 [INF] Request finished in 75.1812ms 200 application/json; charset=utf-8
+2019-06-21 12:46:04.915 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 12:46:04.918 +01:00 [INF] Policy execution successful.
+2019-06-21 12:46:04.919 +01:00 [INF] Request finished in 4.031ms 204 
+2019-06-21 12:46:04.948 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 12:46:04.950 +01:00 [INF] Policy execution successful.
+2019-06-21 12:46:04.951 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:46:04.954 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:46:04.957 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:46:04.974 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 12:46:04.979 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 12:46:04.990 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 33.3748ms.
+2019-06-21 12:46:04.993 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 12:46:05.005 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 51.399100000000004ms
+2019-06-21 12:46:05.007 +01:00 [INF] Request finished in 58.9634ms 200 application/json; charset=utf-8
+2019-06-21 12:50:09.721 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 12:50:09.724 +01:00 [INF] Policy execution successful.
+2019-06-21 12:50:09.751 +01:00 [INF] Request finished in 29.7317ms 204 
+2019-06-21 12:50:09.784 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 12:50:09.790 +01:00 [INF] Policy execution successful.
+2019-06-21 12:50:09.813 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:50:09.830 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:50:09.895 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:50:09.952 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 12:50:09.986 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 12:50:10.033 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 138.5452ms.
+2019-06-21 12:50:10.110 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 12:50:10.165 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 336.5185ms
+2019-06-21 12:50:10.189 +01:00 [INF] Request finished in 405.2205ms 200 application/json; charset=utf-8
+2019-06-21 12:57:35.842 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 12:57:35.845 +01:00 [INF] Policy execution successful.
+2019-06-21 12:57:35.846 +01:00 [INF] Request finished in 3.7597ms 204 
+2019-06-21 12:57:35.851 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 81
+2019-06-21 12:57:35.861 +01:00 [INF] Policy execution successful.
+2019-06-21 12:57:35.863 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:57:35.867 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:57:35.877 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:57:35.888 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 12:57:35.910 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 12:57:35.926 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 60.0465ms
+2019-06-21 12:57:35.928 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+ContactApp.Core.Util.ProcessException: Contact with this mobile 08094575869 already exists
+   at ContactApp.Core.Managers.ContactManager.CreateContact(String userID, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 33
+   at ContactApp.Api.Controllers.ContactController.Create(NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-21 12:57:35.951 +01:00 [ERR] Something went wrong: ContactApp.Core.Util.ProcessException: Contact with this mobile 08094575869 already exists
+   at ContactApp.Core.Managers.ContactManager.CreateContact(String userID, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 33
+   at ContactApp.Api.Controllers.ContactController.Create(NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-21 12:57:35.964 +01:00 [INF] Request finished in 113.4262ms 500 application/json
+2019-06-21 12:57:40.447 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 81
+2019-06-21 12:57:40.452 +01:00 [INF] Policy execution successful.
+2019-06-21 12:57:40.454 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:57:40.466 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:57:40.481 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:57:40.496 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450), @__email_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Email] = @__email_1)
+2019-06-21 12:57:40.511 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 450), @__mobile_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE ([u].[UserId] = @__userId_0) AND ([u].[Mobile] = @__mobile_1)
+2019-06-21 12:57:40.522 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = DateTimeOffset), @p2='?' (Size = 450), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 450), @p6='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Contacts] ([Id], [DateCreated], [Email], [FirstName], [LastName], [Mobile], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2019-06-21 12:57:40.539 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 57.4114ms.
+2019-06-21 12:57:40.549 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 12:57:40.553 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 87.4414ms
+2019-06-21 12:57:40.563 +01:00 [INF] Request finished in 116.1102ms 200 application/json; charset=utf-8
+2019-06-21 12:57:48.984 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/6cd806dd-5a91-4d9b-9a53-8a69882f3587  
+2019-06-21 12:57:48.988 +01:00 [INF] Policy execution successful.
+2019-06-21 12:57:48.990 +01:00 [INF] Request finished in 5.7417ms 204 
+2019-06-21 12:57:48.992 +01:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:5001/api/contacts/6cd806dd-5a91-4d9b-9a53-8a69882f3587  
+2019-06-21 12:57:48.993 +01:00 [INF] Policy execution successful.
+2019-06-21 12:57:48.994 +01:00 [INF] Route matched with {action = "DeleteContact", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteContact(System.String) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 12:57:49.010 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 12:57:49.012 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 12:57:49.018 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DateCreated], [e].[Email], [e].[FirstName], [e].[LastName], [e].[Mobile], [e].[UserId]
+FROM [Contacts] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+2019-06-21 12:57:49.031 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Contacts]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2019-06-21 12:57:49.045 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 33.3146ms.
+2019-06-21 12:57:49.047 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.Object, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-21 12:57:49.048 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.DeleteContact (ContactApp.Api) in 38.7212ms
+2019-06-21 12:57:49.062 +01:00 [INF] Request finished in 69.7971ms 200 application/json; charset=utf-8
+2019-06-21 13:02:27.242 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 13:02:27.245 +01:00 [INF] Policy execution successful.
+2019-06-21 13:02:27.246 +01:00 [INF] Request finished in 4.4785ms 204 
+2019-06-21 13:02:27.263 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 13:02:27.265 +01:00 [INF] Policy execution successful.
+2019-06-21 13:02:27.271 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 13:02:27.275 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 13:02:27.289 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 13:02:27.297 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 13:02:27.309 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 13:02:27.322 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 32.932ms.
+2019-06-21 13:02:27.325 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 13:02:27.353 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 78.311500000000009ms
+2019-06-21 13:02:27.355 +01:00 [INF] Request finished in 92.9002ms 200 application/json; charset=utf-8
+2019-06-21 13:06:55.356 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 13:06:55.359 +01:00 [INF] Policy execution successful.
+2019-06-21 13:06:55.360 +01:00 [INF] Request finished in 4.7254ms 204 
+2019-06-21 13:06:55.418 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 13:06:55.422 +01:00 [INF] Policy execution successful.
+2019-06-21 13:06:55.434 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 13:06:55.449 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 13:06:55.452 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 13:06:55.467 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 13:06:55.472 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 13:06:55.484 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 32.1137ms.
+2019-06-21 13:06:55.490 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 13:06:55.508 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 59.3584ms
+2019-06-21 13:06:55.511 +01:00 [INF] Request finished in 93.6482ms 200 application/json; charset=utf-8
+2019-06-21 13:07:46.578 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 13:07:46.587 +01:00 [INF] Policy execution successful.
+2019-06-21 13:07:46.595 +01:00 [INF] Request finished in 17.6756ms 204 
+2019-06-21 13:07:46.644 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 13:07:46.647 +01:00 [INF] Policy execution successful.
+2019-06-21 13:07:46.652 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 13:07:46.668 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 13:07:46.697 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 13:07:46.940 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 13:07:47.034 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 13:07:47.062 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 367.34860000000003ms.
+2019-06-21 13:07:47.068 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 13:07:47.077 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 409.2855ms
+2019-06-21 13:07:47.091 +01:00 [INF] Request finished in 447.2669ms 200 application/json; charset=utf-8
+2019-06-21 13:07:57.871 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 13:07:57.873 +01:00 [INF] Policy execution successful.
+2019-06-21 13:07:57.874 +01:00 [INF] Request finished in 2.925ms 204 
+2019-06-21 13:07:57.939 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 13:07:57.940 +01:00 [INF] Policy execution successful.
+2019-06-21 13:07:57.942 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 13:07:57.967 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 13:07:57.969 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 13:07:57.975 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 13:07:57.989 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 13:07:57.991 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.556ms.
+2019-06-21 13:07:58.014 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 13:07:58.020 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 53.660700000000006ms
+2019-06-21 13:07:58.045 +01:00 [INF] Request finished in 105.8756ms 200 application/json; charset=utf-8
+2019-06-21 13:08:01.625 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 13:08:01.631 +01:00 [INF] Policy execution successful.
+2019-06-21 13:08:01.640 +01:00 [INF] Request finished in 14.9738ms 204 
+2019-06-21 13:08:01.643 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 2
+2019-06-21 13:08:01.655 +01:00 [INF] Policy execution successful.
+2019-06-21 13:08:01.658 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 13:08:01.697 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-21 13:08:01.706 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 31.288800000000002ms
+2019-06-21 13:08:01.716 +01:00 [INF] Request finished in 72.9869ms 400 application/json; charset=utf-8
+2019-06-21 13:08:20.846 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 13:08:20.850 +01:00 [INF] Policy execution successful.
+2019-06-21 13:08:20.853 +01:00 [INF] Request finished in 6.5411ms 204 
+2019-06-21 13:08:20.858 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 13:08:20.868 +01:00 [INF] Policy execution successful.
+2019-06-21 13:08:20.868 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 13:08:20.871 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 13:08:20.873 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 13:08:20.883 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 13:08:20.887 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 13:08:20.901 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 28.0618ms.
+2019-06-21 13:08:20.903 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 13:08:20.905 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 33.8941ms
+2019-06-21 13:08:20.917 +01:00 [INF] Request finished in 58.9131ms 200 application/json; charset=utf-8
+2019-06-21 13:10:38.432 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 13:10:38.435 +01:00 [INF] Policy execution successful.
+2019-06-21 13:10:38.439 +01:00 [INF] Request finished in 6.3722ms 204 
+2019-06-21 13:10:38.465 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 13:10:38.467 +01:00 [INF] Policy execution successful.
+2019-06-21 13:10:38.469 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 13:10:38.472 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 13:10:38.486 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 13:10:38.491 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 13:10:38.505 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 13:10:38.515 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.375400000000003ms.
+2019-06-21 13:10:38.517 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 13:10:38.520 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 47.9018ms
+2019-06-21 13:10:38.522 +01:00 [INF] Request finished in 56.9698ms 200 application/json; charset=utf-8
+2019-06-21 13:19:37.076 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-21 13:19:37.077 +01:00 [INF] Policy execution successful.
+2019-06-21 13:19:37.080 +01:00 [INF] Request finished in 4.283ms 204 
+2019-06-21 13:19:37.116 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-21 13:19:37.117 +01:00 [INF] Policy execution successful.
+2019-06-21 13:19:37.118 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-21 13:19:37.122 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-21 13:19:37.124 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-21 13:19:37.143 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-21 13:19:37.150 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-21 13:19:37.163 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 38.7712ms.
+2019-06-21 13:19:37.165 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-21 13:19:37.167 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 45.6132ms
+2019-06-21 13:19:37.177 +01:00 [INF] Request finished in 61.5548ms 200 application/json; charset=utf-8
