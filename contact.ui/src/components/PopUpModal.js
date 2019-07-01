@@ -24,7 +24,7 @@ class PopUpModaal extends React.Component{
 
       
         return(  <Modal isOpen={this.props.isOpen}  className={this.props.className}>
-            <ModalHeader  toggle={this.props.closePopUp} >Modal title</ModalHeader>
+            <ModalHeader   toggle={this.props.closePopUp} >{this.props.headerText}</ModalHeader>
 
             {this.props.children}
 

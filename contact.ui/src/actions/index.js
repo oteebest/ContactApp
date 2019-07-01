@@ -1,6 +1,5 @@
-import contactApi from '../api/contacts';
-import history from '../history';
-import { SIGN_IN, SIGN_OUT, FETCH_CONTACT, FETCH_CONTACTS, EDIT_CONTACT, CREATE_CONTACT, DELETE_CONTACT,
+import contactApi from '../api';
+import {  FETCH_CONTACTS, EDIT_CONTACT, CREATE_CONTACT, DELETE_CONTACT,
     SHOW_MESSAGE,ADD_MODAL_IS_VISIBLE, EDIT_MODAL_IS_VISIBLE } from './type';
 
 

@@ -1,5 +1,5 @@
-import { SIGN_IN, SIGN_OUT, FETCH_CONTACT, FETCH_CONTACTS, EDIT_CONTACT,
-    ADD_MODAL_IS_VISIBLE, CREATE_CONTACT, DELETE_CONTACT } from '../actions/type';
+import {  FETCH_CONTACTS, EDIT_CONTACT,
+     CREATE_CONTACT, DELETE_CONTACT } from '../actions/type';
 import _ from 'lodash';
 
 

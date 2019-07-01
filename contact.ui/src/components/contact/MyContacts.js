@@ -6,6 +6,7 @@ import { fetchContacts,createContact,deleteContact,openAddModal, openEditModal }
 import CreateContact from './CreateContact';
 import EditContact from './EditContact';
 import {Link} from 'react-router-dom';
+import {SuccessAlert} from '../../util/alert';
 
 
 class MyContacts extends React.Component{
@@ -93,6 +94,7 @@ class MyContacts extends React.Component{
 
                 <EditContact showEditModal={this.props.modals.showEditModal}  />
 
+                <SuccessAlert ></SuccessAlert>
                 <button  className="btn btn-primary btn-sm float-right" onClick={this.openAddModal}    id="btnCreate">Create Contact</button>
 
                 <button  className="btn btn-primary btn-sm float-right" style={{marginRight:10}} id="importContact">Import Contact</button>
