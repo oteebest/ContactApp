@@ -430,3 +430,150 @@ System.Exception: You have another contact with this email otee@zitechng.com add
    at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
    at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
 2019-06-30 22:50:52.362 +01:00 [INF] Request finished in 596.8875ms 500 application/json
+2019-06-30 22:58:07.829 +01:00 [INF] User profile is available. Using 'C:\Users\oteeb\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-06-30 22:58:08.829 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-30 22:58:09.216 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[ConcurrencyStamp], [r].[Name], [r].[NormalizedName]
+FROM [AspNetRoles] AS [r]
+WHERE [r].[NormalizedName] = @__normalizedName_0
+2019-06-30 22:58:09.372 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[AccessFailedCount], [u].[ConcurrencyStamp], [u].[Email], [u].[EmailConfirmed], [u].[FirstName], [u].[LastName], [u].[LockoutEnabled], [u].[LockoutEnd], [u].[NormalizedEmail], [u].[NormalizedUserName], [u].[PasswordHash], [u].[PhoneNumber], [u].[PhoneNumberConfirmed], [u].[SecurityStamp], [u].[TwoFactorEnabled], [u].[UserName]
+FROM [AspNetUsers] AS [u]
+WHERE [u].[NormalizedUserName] = @__normalizedUserName_0
+2019-06-30 22:58:33.855 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/7c8932d4-3770-44d1-b812-16cfc6e56dac  
+2019-06-30 22:58:33.883 +01:00 [INF] Policy execution successful.
+2019-06-30 22:58:33.897 +01:00 [INF] Request finished in 46.7262ms 204 
+2019-06-30 22:58:33.913 +01:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/contacts/7c8932d4-3770-44d1-b812-16cfc6e56dac application/json 189
+2019-06-30 22:58:33.934 +01:00 [INF] Policy execution successful.
+2019-06-30 22:58:34.260 +01:00 [INF] Route matched with {action = "Update", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.String, ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-30 22:58:34.422 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Update (ContactApp.Api) - Validation state: "Valid"
+2019-06-30 22:58:34.433 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-30 22:58:34.491 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450), @__contactId_1='?' (Size = 450), @__email_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE (([u].[UserId] = @__userId_0) AND ([u].[Id] <> @__contactId_1)) AND ([u].[Email] = @__email_2)
+2019-06-30 22:58:34.524 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Update (ContactApp.Api) in 254.3905ms
+2019-06-30 22:58:34.532 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+ContactApp.Core.Util.ProcessException: You have another contact with this email otee@zitechng.com address. Contact name Otee Ziregbe
+   at ContactApp.Core.Managers.ContactManager.UpdateContact(String userId, String contactId, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 62
+   at ContactApp.Api.Controllers.ContactController.Update(String contactId, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 49
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-30 22:58:34.814 +01:00 [ERR] Something went wrong: ContactApp.Core.Util.ProcessException: You have another contact with this email otee@zitechng.com address. Contact name Otee Ziregbe
+   at ContactApp.Core.Managers.ContactManager.UpdateContact(String userId, String contactId, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 62
+   at ContactApp.Api.Controllers.ContactController.Update(String contactId, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 49
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-30 22:58:34.971 +01:00 [INF] Request finished in 1058.422ms 500 application/json
+2019-06-30 22:58:40.089 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts/7c8932d4-3770-44d1-b812-16cfc6e56dac  
+2019-06-30 22:58:40.096 +01:00 [INF] Policy execution successful.
+2019-06-30 22:58:40.105 +01:00 [INF] Request finished in 16.3099ms 204 
+2019-06-30 22:58:40.124 +01:00 [INF] Request starting HTTP/1.1 PUT https://localhost:5001/api/contacts/7c8932d4-3770-44d1-b812-16cfc6e56dac application/json 189
+2019-06-30 22:58:40.159 +01:00 [INF] Policy execution successful.
+2019-06-30 22:58:40.202 +01:00 [INF] Route matched with {action = "Update", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.String, ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-30 22:58:40.290 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Update (ContactApp.Api) - Validation state: "Valid"
+2019-06-30 22:58:40.343 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-30 22:58:40.395 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450), @__contactId_1='?' (Size = 450), @__email_2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE (([u].[UserId] = @__userId_0) AND ([u].[Id] <> @__contactId_1)) AND ([u].[Email] = @__email_2)
+2019-06-30 22:58:40.478 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Update (ContactApp.Api) in 193.8049ms
+2019-06-30 22:58:40.514 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+ContactApp.Core.Util.ProcessException: You have another contact with this email otee@zitechng.com address. Contact name Otee Ziregbe
+   at ContactApp.Core.Managers.ContactManager.UpdateContact(String userId, String contactId, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 62
+   at ContactApp.Api.Controllers.ContactController.Update(String contactId, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 49
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-30 22:58:40.938 +01:00 [ERR] Something went wrong: ContactApp.Core.Util.ProcessException: You have another contact with this email otee@zitechng.com address. Contact name Otee Ziregbe
+   at ContactApp.Core.Managers.ContactManager.UpdateContact(String userId, String contactId, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Core\Managers\ContactManager.cs:line 62
+   at ContactApp.Api.Controllers.ContactController.Update(String contactId, NewContactViewModel model) in C:\Projects\ContactApp\ContactApp\ContactApp.Api\Controllers\ContactController.cs:line 49
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware.Invoke(HttpContext context)
+2019-06-30 22:58:41.071 +01:00 [INF] Request finished in 946.858ms 500 application/json
+2019-06-30 22:58:59.243 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-30 22:58:59.246 +01:00 [INF] Policy execution successful.
+2019-06-30 22:58:59.250 +01:00 [INF] Request finished in 6.7351ms 204 
+2019-06-30 22:58:59.309 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/contacts  
+2019-06-30 22:58:59.316 +01:00 [INF] Policy execution successful.
+2019-06-30 22:58:59.333 +01:00 [INF] Route matched with {action = "Index", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(Int32, Int32) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-30 22:58:59.400 +01:00 [INF] Executing action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) - Validation state: "Valid"
+2019-06-30 22:58:59.425 +01:00 [INF] Entity Framework Core 2.2.4-servicing-10062 initialized 'ContactDataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: MigrationsAssembly=ContactApp.Api 
+2019-06-30 22:58:59.538 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userID_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+2019-06-30 22:58:59.582 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userID_0='?' (Size = 450), @__p_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[DateCreated], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Mobile], [u].[UserId]
+FROM [Contacts] AS [u]
+WHERE [u].[UserId] = @__userID_0
+ORDER BY [u].[DateCreated] DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2019-06-30 22:58:59.597 +01:00 [INF] Executed action method ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 173.69140000000002ms.
+2019-06-30 22:58:59.641 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[ContactApp.Core.Models.Page`1[[ContactApp.Core.Models.ContactViewModel, ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], ContactApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-06-30 22:58:59.676 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Index (ContactApp.Api) in 278.2554ms
+2019-06-30 22:58:59.683 +01:00 [INF] Request finished in 373.4244ms 200 application/json; charset=utf-8
+2019-06-30 22:59:39.471 +01:00 [INF] Request starting HTTP/1.1 OPTIONS https://localhost:5001/api/contacts  
+2019-06-30 22:59:39.487 +01:00 [INF] Policy execution successful.
+2019-06-30 22:59:39.532 +01:00 [INF] Request finished in 60.548ms 204 
+2019-06-30 22:59:39.546 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:5001/api/contacts application/json 2
+2019-06-30 22:59:39.576 +01:00 [INF] Policy execution successful.
+2019-06-30 22:59:39.622 +01:00 [INF] Route matched with {action = "Create", controller = "Contact"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ContactApp.Core.Models.NewContactViewModel) on controller ContactApp.Api.Controllers.ContactController (ContactApp.Api).
+2019-06-30 22:59:39.685 +01:00 [INF] Executing ObjectResult, writing value of type 'ContactApp.Core.Models.ResponseModel`1[[System.String, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2019-06-30 22:59:39.711 +01:00 [INF] Executed action ContactApp.Api.Controllers.ContactController.Create (ContactApp.Api) in 33.932700000000004ms
+2019-06-30 22:59:39.726 +01:00 [INF] Request finished in 180.3853ms 400 application/json; charset=utf-8
