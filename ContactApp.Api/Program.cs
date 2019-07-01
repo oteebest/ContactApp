@@ -37,7 +37,6 @@ namespace ContactApp.Api
            .CreateLogger();
 
 
-
             try
             {
                 CreateWebHostBuilder(args).Build().Run();

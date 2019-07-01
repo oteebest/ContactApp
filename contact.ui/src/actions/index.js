@@ -1,6 +1,7 @@
 import contactApi from '../api';
 import {  FETCH_CONTACTS, EDIT_CONTACT, CREATE_CONTACT, DELETE_CONTACT,
     SHOW_MESSAGE,ADD_MODAL_IS_VISIBLE, EDIT_MODAL_IS_VISIBLE } from './type';
+    import {SUCCESS_MESSAGE, ERROR_MESSAGE, INFO_MESSAGE} from '../util/alert';
 
 
 
@@ -24,7 +25,7 @@ export const openEditModal = (id) => async dispatch =>{
       
         dispatch({type: EDIT_CONTACT, payload: response.data });
 
-       dispatch({type: EDIT_MODAL_IS_VISIBLE, payload:{id, visible: true } });
+        dispatch({type: EDIT_MODAL_IS_VISIBLE, payload:{id, visible: true } });
 
     }
     catch(err){
@@ -50,6 +51,8 @@ export const closeModal = () => async dispatch => {
     dispatch({type: ADD_MODAL_IS_VISIBLE, payload: false});
 
     dispatch({type: EDIT_MODAL_IS_VISIBLE, payload:{id:null, visible: false } });
+
+
 }
 
 
@@ -59,18 +62,28 @@ export const createContact = formValues => async dispatch => {
 
     try
     {
+
        response = await contactApi.post("api/contacts",{...formValues});
 
+      
        dispatch({ type: CREATE_CONTACT,  payload: response.data.data});
 
        dispatch({type: ADD_MODAL_IS_VISIBLE, payload: false});
 
+       dispatch({type: SHOW_MESSAGE, payload: {showMessage: true, message: "Contact added successfully", type: SUCCESS_MESSAGE} });
+       
+
+
     }
     catch(err)
     {
-       
-        dispatch({ type: SHOW_MESSAGE,  payload: response.data});
+
+     
+       dispatch({type: SHOW_MESSAGE, payload: {showMessage: true, message: err.response.data.message, type: ERROR_MESSAGE} });
+
     }
+
+   
   
 };
 
@@ -85,10 +98,12 @@ export const editContact = (id,formValues) => async dispatch => {
 
         dispatch({type: EDIT_MODAL_IS_VISIBLE, payload: false});
 
+        dispatch({type: SHOW_MESSAGE, payload: {showMessage: true, message: "Contact updated successfully", type: SUCCESS_MESSAGE} });
+
     }
     catch(err){
 
-        dispatch({ type: SHOW_MESSAGE,  payload: response.data});
+        dispatch({type: SHOW_MESSAGE, payload: {showMessage: true, message: err.response.data.message, type: ERROR_MESSAGE} });
 
     }
 }
@@ -103,7 +118,7 @@ export const deleteContact = id => async dispatch => {
 
         dispatch({ type: DELETE_CONTACT, payload: id});
 
-        dispatch({ type: SHOW_MESSAGE,  payload: response.data});
+        dispatch({type: SHOW_MESSAGE, payload: {showMessage: true, message: "Contact deleted successfully", type: SUCCESS_MESSAGE} });
     }
     catch(err)
     {
@@ -111,7 +126,7 @@ export const deleteContact = id => async dispatch => {
 
         console.log(response);
 
-        dispatch({ type: SHOW_MESSAGE,  payload: response.data});
+        dispatch({type: SHOW_MESSAGE, payload: {showMessage: true, message: response.data.message, type: ERROR_MESSAGE} });
     }
 
 };

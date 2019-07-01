@@ -57,11 +57,11 @@ namespace ContactApp.Core.Managers
         {
             var contactByEmail = await _contactRepo.GetAnotherUserContactByEmail(userId,contactId, model.Email);
 
-            if (contactByEmail != null) throw new Exception($"You have another contact with this email { model.Email} address. Contact name {contactByEmail.FirstName} {contactByEmail.LastName}");
+            if (contactByEmail != null) throw new ProcessException($"You have another contact with this email { model.Email} address. Contact name {contactByEmail.FirstName} {contactByEmail.LastName}");
 
             var contactByMobile = await _contactRepo.GetAnotherUserContactByMobiler(userId,contactId, model.Mobile);
 
-            if (contactByMobile != null) throw new Exception($"You hav another contact with this mobile number { model.Mobile }. Contact name { contactByMobile.FirstName} { contactByMobile.LastName}");
+            if (contactByMobile != null) throw new ProcessException($"You hav another contact with this mobile number { model.Mobile }. Contact name { contactByMobile.FirstName} { contactByMobile.LastName}");
 
             return await _contactRepo.UpdateContacts(contactId, model);
         }

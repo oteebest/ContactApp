@@ -6,8 +6,8 @@ import { fetchContacts,createContact,deleteContact,openAddModal, openEditModal }
 import CreateContact from './CreateContact';
 import EditContact from './EditContact';
 import {Link} from 'react-router-dom';
-import {SuccessAlert} from '../../util/alert';
-
+import {toastr} from 'react-redux-toastr'
+import {SUCCESS_MESSAGE, ERROR_MESSAGE, INFO_MESSAGE} from '../../util/alert';
 
 class MyContacts extends React.Component{
 
@@ -19,8 +19,36 @@ class MyContacts extends React.Component{
 
  
     componentDidUpdate(){
-    
-        console.log(this.state);
+        this.renderAlert();
+    }
+
+    renderAlert(){
+
+        const alert = this.props.alerts;
+
+        if( alert.showMessage == true ){
+
+           
+            switch(alert.type){
+
+                
+            case SUCCESS_MESSAGE:
+            toastr.success(alert.message);
+          
+            return;
+            case ERROR_MESSAGE:
+            toastr.error(alert.message);
+            return;
+            case INFO_MESSAGE:
+            toastr.info(alert.message);
+            return;
+            default:
+            toastr.warning(alert.message);
+           
+            }
+
+        }
+
     }
 
 
@@ -80,9 +108,11 @@ class MyContacts extends React.Component{
     }
 
 
+ 
     renderContacts(){
         
-     
+        this.renderAlert();
+
         return (<div className="row">       
         <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
             <div className="card">
@@ -94,7 +124,6 @@ class MyContacts extends React.Component{
 
                 <EditContact showEditModal={this.props.modals.showEditModal}  />
 
-                <SuccessAlert ></SuccessAlert>
                 <button  className="btn btn-primary btn-sm float-right" onClick={this.openAddModal}    id="btnCreate">Create Contact</button>
 
                 <button  className="btn btn-primary btn-sm float-right" style={{marginRight:10}} id="importContact">Import Contact</button>
@@ -152,7 +181,8 @@ const mapStateToProps = state => {
   
     return {
       contacts: state.contacts,
-      modals: state.modals
+      modals: state.modals,
+      alerts: state.alerts,
     };
   };
   
